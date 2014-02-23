@@ -1,0 +1,68 @@
+body{
+	background-color: #272822;
+}
+
+.stage{
+	position:absolute;
+	top:30%;
+	left:38%;
+	width:300px;
+	height:300px;
+	-webkit-perspective: 750px; /* Safari and Chrome */
+}
+
+.cubeface{
+	position:absolute;
+	width:300px;
+	height:300px;
+	transition: all 1s linear;
+}
+
+.cube{
+	-webkit-transform-style: preserve-3d; 
+	-webkit-animation: animationCube 5s infinite linear; 
+}
+@-webkit-keyframes animationCube{
+	0%   {-webkit-transform: rotateY(0deg); }
+	100% {-webkit-transform: rotateY(360deg); }
+}
+.cube img{
+	opacity:.5;
+}
+#face1{
+	-webkit-transform: translateZ(150px); 
+}
+#face2{
+	-webkit-transform: translateZ(-150px); 
+}
+#face3{
+	-webkit-transform: translateY(-150px) rotateX(90deg); 
+}
+#face4{
+	-webkit-transform: translateY(150px) rotateX(90deg); 
+}
+#face5{
+	-webkit-transform: translateX(150px) rotateY(90deg); 
+}
+#face6{
+	-webkit-transform: translateX(-150px) rotateY(90deg); 
+}
+
+.cube:hover #face1{
+	-webkit-transform: translateZ(180px);
+}
+.cube:hover #face2{
+	-webkit-transform: translateZ(-180px);
+}
+.cube:hover #face3{
+	-webkit-transform: translateY(-180px) rotateX(90deg);
+}
+.cube:hover #face4{
+	-webkit-transform: translateY(180px) rotateX(90deg);
+}
+.cube:hover #face5{
+	-webkit-transform: translateX(180px) rotateY(90deg);
+}
+.cube:hover #face6{
+	-webkit-transform: translateX(-180px) rotateY(90deg);
+}
